@@ -1,0 +1,104 @@
+/* text */
+h1.title{
+	font-weight:normal;
+	text-align: left;
+	color:black;
+	background-color:orange;
+}
+
+p.input_title{
+	color: black;
+	font-size:18px;
+}
+
+p.footnote{
+	color:grey;
+	text-align: right;
+	font-size:14px;
+}
+
+p.input_date_title{
+	font-size: 18px;
+}
+/* inputs */
+input.input_them{
+	width:550px;
+	height:30px;
+}
+
+input{
+	font-size:14px;
+}
+
+input.priority{
+	width:250px;
+	height:30px;
+}
+
+input.request{
+	width:250px;
+	height:30px;
+}
+
+input.input_responsible{
+	width:250px;
+	height:30px;	
+}
+
+textarea.textarea{
+	width:550px;
+	height:150px;
+}
+/* forms */
+form.form1{
+	float:left;
+}
+
+form.form1_1{
+	margin-left: 50px;
+	float:Left;
+}
+
+form.form2{
+	margin-left: 50px;
+	float:Left;
+}
+
+form.data{
+	margin-left: 50px;
+}
+/* divs */
+div.container_long{
+	display: flex;
+    justify-content: Left;
+}
+
+div.container_them1_1{
+	/* display: flex;
+    justify-content: Left; */
+	text-indent: 20px
+}
+
+div.container_short{
+	display: flex;
+    justify-content: Left;
+}
+
+/* button */
+button.btn_save{
+	background-color:green;
+}
+
+/* global */
+@font-face{
+	font-family: 'Montserrat';
+	font-weight:normal;
+	src: url(../fonts/Montserrat-VariableFont_wght.ttf)
+}
+
+/*body{
+	
+    background-image:url("../images/main4.jpg");
+	font-family: 'Montserrat';
+}
+*/

@@ -1,0 +1,65 @@
+<Html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>new request</title> <!-- Название страницы -->
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/request.css' %}"> <!-- Подключение css -->
+	</head>
+
+
+	<body>
+		<h1 class="title">Новая заявка</h1>
+		<div class="container_long">
+			<form class="form1">
+				<p class="input_title">* Тема</p> <!-- Подпись для поля ввода -->
+					<input class="input_them" id="input_them" type="text" placeholder="Тема заявки"> <!-- Поле ввода -->
+			</form>
+			<form class="form1_1">
+				<p class="input_title"> Ответственный сотрудник</p> <!-- Подпись для поля ввода -->
+					<input class="input_responsible" type="text" placeholder="Введите ФИО"> <!-- Поле ввода -->
+			</form>
+		</div class="container_them1">
+		<div class="container_short">
+			<form class="form1">
+				<p class="input_title">Тип заявки</p> <!-- input типа заявки -->
+					<input class="request" name="request type" list="request" placeholder="Выберите вариант">
+						<datalist id="request">
+							<option value="Обслуживание">
+							<option value="Установка оборудования">
+							<option value="Другой  вариант">
+						</datalist>
+			</form>
+			<form class="form2">
+				<p class="input_title">Приоритет</p> <!-- input приоритета -->
+					<input class="priority" name="priority type" list="priority" placeholder="Выберите приоритет">
+						<datalist id="priority">
+							<option value="Высокий">
+							<option value="Низкий">
+							<option value="Другой вариант">
+						</datalist>
+			</form>
+			<form class="data">
+				<p class="input_date_title">Плановая дата решения</p>
+				<input class="input date" type="date" id="start" name="trip-start" value="2024-01-01" min="2024-01-01" max="2025-12-31" />
+				<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+			</form>
+		</div class="container_short">
+		<div class="container_">
+			<form class="form3">
+				<p class="input_title">Описание</p>
+				<textarea class="textarea"name="description"></textarea>
+			</form>
+		</div>
+		<div>
+			<div>
+				<button class="btn_save" onClick="submit()">Создать</button> <!-- кнопка на сохранение -->
+			</div>
+			<div>
+				<p class="footnote">* - Обязательное поле</p>
+			</div>
+		</div>
+		<!-- <script src="script.js"></script> Подключение javascript -->
+	</body>
+	
+</Html>

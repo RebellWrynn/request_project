@@ -1,0 +1,36 @@
+/* h */
+h1.title{
+	font-weight:normal;
+	text-align: Center;
+	color:black;
+	background-color:orange;
+}
+/* form */
+form.form1{
+	font-weight: normal;
+	text-align: center;
+}
+
+/* input */
+input.input_login{
+	width: 400px;
+	height: 40px;
+}
+
+input.input_passwd{
+	width: 400px;
+	height: 40px;
+}
+
+/* div */
+div.button{
+	display:flex;
+	justify-content: center;
+}
+/* button */
+button.btn_auth{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
