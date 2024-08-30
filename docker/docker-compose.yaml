@@ -1,11 +1,12 @@
 services:
-  db_auth:
-    container_name: db_auth
+  db:
+    image: postgres:16
+    container_name: RequestSite
+    volumes:
+      - './config/postgresql:/docker-entrypoint-imitdb.d'       #инициализация shell скриптов
     ports:
-      - "5432:5432"
+      - "4321:5432"
     environment:
       POSTGRES_USER: "admin"
       POSTGRES_PASSWORD: "root"
       POSTGRES_DB: "RequestSite"
-    image: postgres:14.3-alpine
-
