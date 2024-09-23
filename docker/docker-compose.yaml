@@ -1,12 +1,15 @@
 services:
-  db:
+  pgdb:
     image: postgres:16
     container_name: RequestSite
     volumes:
-      - './config/postgresql:/docker-entrypoint-imitdb.d'       #инициализация shell скриптов
-    ports:
-      - "4321:5432"
+      - ./pgdata:/var/lib/postgresql/data
+      # - './config:/docker-entrypoint-imitdb.d'   инициализация shell скриптов
     environment:
       POSTGRES_USER: "admin"
       POSTGRES_PASSWORD: "root"
-      POSTGRES_DB: "RequestSite"
+      POSTGRES_DB: "PGDBRequestSite"
+
+    network_mode: "host"
+    ports:
+      - "5433:5432"

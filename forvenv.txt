@@ -1,0 +1,2 @@
+apt install pipx
+pipx install some-python-application
