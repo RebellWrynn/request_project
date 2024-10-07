@@ -10,6 +10,6 @@ router.register(r'api/Requestlist',RequestsApiView)
 
 urlpatterns = [
     path('', views.authorization),  
-    #path('request/',views.request, name="request")
+    path('request/',views.request, name='request'),
     path('', include(router.urls))
 ]
