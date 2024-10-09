@@ -5,3 +5,15 @@ create table employees
 	lastname VARCHAR(30) not null,
 	surname  VARCHAR(30) not null
 );
+
+
+create table requests
+(
+	id int primary key,
+	them varchar(30) not null,
+	requesttype varchar(30) not null,
+	priority varchar (30) not null,
+	description varchar (30) not null,
+	date date not null,
+	responsibleemployee varchar(30) not null
+);
