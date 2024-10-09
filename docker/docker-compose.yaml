@@ -3,7 +3,7 @@ services:
     image: postgres:16
     container_name: RequestSite
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - /home/user/request_project/pgdata:/var/lib/postgresql/data
       # - './config:/docker-entrypoint-imitdb.d'   инициализация shell скриптов
     environment:
       POSTGRES_USER: "admin"
