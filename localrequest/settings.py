@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'localrequest.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "RequestSite",
-        "USER": "postgres",
-        "PASSWORD": "lj;lbr",
+        "NAME": "PGDBRequestSite",
+        "USER": "admin",
+        "PASSWORD": "root",
         "HOST": "localhost",
         "PORT": "5432",
     }
