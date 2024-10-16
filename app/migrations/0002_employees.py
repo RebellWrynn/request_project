@@ -2,10 +2,10 @@
 
 from django.db import migrations
 
-#def create_data(apps,shema_editor):
-    #app = apps.get_model('employees','app')
-    #app(firstname='ivan',lastname='ivanovish',surname='ivanov')
-    #app(firstname='roman',lastname='romanovish',surname='romanov')
+def create_data(apps,shema_editor):
+    employees = apps.get_model('app','employees')
+    employees(firstname='ivan',lastname='ivanovish',surname='ivanov')
+    employees(firstname='roman',lastname='romanovish',surname='romanov')
 
 
 
@@ -15,6 +15,7 @@ class Migration(migrations.Migration):
         ('app', '0001_initial'),
     ]
 
-   # operations = [
-      #  migrations.RunPython(create_data)
-   # ]
+    operations = [
+        migrations.RunPython(create_data)
+    ]
+
