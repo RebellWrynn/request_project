@@ -2,14 +2,22 @@ services:
   pgdb:
     image: postgres:16
     container_name: RequestSite
-    #volumes:
-    #- C:\Users\user\Desktop\pgdata:/var/lib/postgresql/data
+    volumes:
+      - C:\desk\pgdata:/var/lib/postgresql/data
     # - './config:/docker-entrypoint-imitdb.d'   инициализация shell скриптов
     environment:
       POSTGRES_USER: "admin"
       POSTGRES_PASSWORD: "root"
       POSTGRES_DB: "PGDBRequestSite"
 
-    network_mode: "host"
     ports:
       - "5432:5432"
+
+    # healthcheck:
+    #   #CHANGE 1: this command checks if the database is ready, right on the source db server
+    #   test: ["CMD-SHELL", "pg_isready"]
+    #   interval: 5s
+    #   timeout: 5s
+    #   retries: 5
+
+  # network_mode: "host"
